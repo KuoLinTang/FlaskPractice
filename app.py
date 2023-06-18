@@ -9,15 +9,15 @@ def root():
     return "This is the root."
 
 
-@app.route('/home')
+@app.route('/home/')
 def home():
     return render_template('homepage.html')
 
 
 # testing passing parameters using URL string
-@app.route('/home/test/<username>')
+@app.route('/home/test/<username>/')
 def print_username(username):
-    return username
+    return f'USERNAME: {username}'
 
 
 # testing passing parameters using arguments
