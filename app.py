@@ -24,7 +24,8 @@ def print_username(username):
 @app.route('/home/test/')
 def request_username():
     username = request.args.get("username")
-    return username
+    password = request.args.get("password")
+    return f'USERNAME: {username} AND PASSWORD: {password}'
 
 
 if __name__ == "__main__":
