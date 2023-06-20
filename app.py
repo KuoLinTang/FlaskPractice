@@ -50,6 +50,5 @@ def login():
     return render_template('login_success.html', username=username, password=password)
 
 
-# 如何在flask application中接收該html回傳的username和password
 if __name__ == "__main__":
     app.run(debug=True)

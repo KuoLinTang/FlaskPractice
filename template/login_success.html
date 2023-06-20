@@ -4,12 +4,29 @@
 <head>
     <meta charset="utf-8" />
     <title>Homepage</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-    <h3>
-        Hello {{ username }}! Your password is {{ password }}.
-    </h3>
+    <div class="container">
+        <h3>
+            Login Successful!
+        </h3>
+        <h4>
+            Hello {{ username }}! Your password is {{ password }}.
+        </h4>
+    </div>
 </body>
 
 </html>
