@@ -36,5 +36,20 @@ def testing_html_parameter():
     return render_template('page_with_parameter.html', name=name, username=username)
 
 
+# practising redirect to another page
+@app.route('/home/login')
+def send_login_page():
+    return render_template('login.html')
+
+
+@app.route('/home/login_success', methods=['POST'])
+def login():
+    # request.form is a dictionary, 'username' is a key, which is corresponding to the name attribute
+    username = request.form['username']
+    password = request.form['password']
+    return render_template('login_success.html', username=username, password=password)
+
+
+# 如何在flask application中接收該html回傳的username和password
 if __name__ == "__main__":
     app.run(debug=True)
